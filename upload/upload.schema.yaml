@@ -1,0 +1,140 @@
+title: Schéma des fichiers d'upload
+description: |
+  Schéma JSON des fichiers de ressources à charger/supprimer d'un registre avec l'utilitaire uploader.php
+  Un fichier est décomposé en chapitres qui peuvent être chargés individuellement.
+  Chaque chapitre contient un ensemble d'ordres de chargement ou de suppression.
+  Un fichier peut aussi comporter une liste de tests à effectuer avec l'utilitaire tests.php.
+$id: https://registre.georef.eu/upload.schema.yaml
+$schema: http://json-schema.org/schema#
+definitions:
+  chapter:
+    description: sous-ensemble du fichier activable par l'uploader
+    type: object
+    additionalProperties: false
+    required: [title]
+    properties:
+      title:
+        description: titre du chapitre
+        type: string
+      abstract:
+        description: résumé du chapitre
+        type: string
+      delete:
+        description: liste des ressources à supprimer identifiées par leur path
+        type: array
+        items:
+          type: string
+      put:
+        description: enregistrements à charger indexés sur le path
+        type: object
+        additionalProperties: false
+        patternProperties:
+          '^[-a-zA-Z0-9$_.+/]*$':
+            type: object
+            additionalProperties: false
+            required: [parent, type, title]
+            properties:
+              parent:
+                type: string
+              type:
+                type: string
+                enum: [E,R,S]
+              title:
+                type: string
+              script:
+                type: string
+              jsonval:
+                oneOf:
+                  - description: contenu comme string
+                    type: string
+                  - description: contenu comme object
+                    type: object
+                  - description: référence à un fichier
+                    type: object
+                    additionalProperties: false
+                    required: [$ref]
+                    properties:
+                      $ref:
+                        description: chemin du fichier
+                        type: string
+              htmlval:
+                type: string
+  test:
+    description: test élémentaire
+    additionalProperties: false
+    required: [title, method, path, resultCode]
+    type: object
+    properties:
+      title:
+        description: titre du test
+        type: string
+      method:
+        description: méthode Http
+        type: string
+        enum: [GET,PUT,DELETE,POST]
+      path:
+        description: chemin définissant la ressource
+        type: string
+      resultCode:
+        description: code Http de retour attendu
+        type: integer
+      content:
+        description: contenu du message à transmettre
+        oneOf:
+          - description: message défini comme texte
+            type: string
+          - description: message défini comme dict transformé en JSON
+            type: object
+            properties:
+              parent:
+                type: string
+              type:
+                type: string
+              title:
+                type: string
+              script:
+                type: string
+              jsonval:
+                oneOf:
+                  - type: object
+                  - type: string
+              htmlval:
+                type: string
+          - description: message défini comme array transformé en JSON
+            type: array
+
+type: object
+additionalProperties: false
+required: [title, abstract, $schema, chapters]
+properties:
+  title:
+    type: string
+  abstract:
+    type: string
+  $schema:
+    description: schéma JSON du document défini soit par une référence, soit inline
+    oneOf:
+      - type: string
+      - $ref: http://json-schema.org/schema#
+  chapters:
+    description: dictionnaire de chapitres chacun identifié par un nom
+    additionalProperties: false
+    patternProperties:
+      '^[-a-zA-Z0-9$_.+/]*$':
+        $ref: '#/definitions/chapter'
+  tests:
+    description: liste de tests structurée par chapitres
+    additionalProperties: false
+    patternProperties:
+      '^[-a-zA-Z0-9$_.+/]*$': # id de chaque chapitre
+        description: liste des tests du chapitre
+        type: array
+        items:
+          description: test élémentaire
+          $ref: '#/definitions/test'
+  eof:
+    description: marque de fin de fichier
+    type: 'null'
+
+
+

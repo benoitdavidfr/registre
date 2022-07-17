@@ -1,0 +1,499 @@
+title: définition de ressources de base à charger dans le registre avec uploader.php
+abstract: |
+  Ce fichier comporte les chapitres suivants:
+    - le chapitre init créée qqs ressources de base,
+    - le chapitre export définit des scripts d'export.
+    - le chapitre deleteTests supprime les éléments créés par le test.
+$schema: upload
+chapters:
+  init:
+    title: chapitre d'initialisation du registre admin
+    abstract: |
+      Le chapitre init créée qqs ressources de base:
+        - le registre /scripts
+        - le script showYamlFile.php utilisé pour /api pour affichier un fichier Yaml
+        - l'élément /api qui utilise le script précédent
+        - le registre masked qui contiendra des éléments masqués
+        - le registre admin qui contient des fonctionnalités d'administration du registre et qui est masqué
+        - un script pour afficher la version du registre
+        - l'élément affichant la version du registre en appelant le script précédent
+        - l'élément affichant le log des mises à jour récentes
+        - un script pour afficher le log des erreurs
+        - l'élément affichant le log des erreurs
+    put:
+      #/stop:
+      /scripts:
+        parent: ''
+        type: R
+        title: Registre des scripts
+      /scripts/showYamlFile.php:
+        parent: /scripts
+        type: S
+        title: script affichant un fichier Yaml existant dont le nom est défini dans la propriété filename du jsonval
+        jsonval: |
+          use Symfony\Component\Yaml\Yaml;
+          if (!isset($data['filename']))
+            error(500, "propriété filename non définie");
+          echo json_encode(Yaml::parseFile($data['filename']), JSON_OPTIONS);
+        htmlval: |
+          if (!isset($data['filename'])) {
+            header('HTTP/1.1 500 Internal Server Error');
+            die("propriété filename non définie\n");
+          }
+          echo '<pre>',file_get_contents($data['filename']),"</pre>\n";
+      /api:
+        parent: ''
+        type: E
+        title: Description OAS 3.0.0 de l'API
+        script: /scrips/showYamlFile.php
+        jsonval:
+          filename: api.yaml
+      /masked:
+        parent: /masked
+        type: R
+        title: rubrique masquée contenant les rubriques masquées
+      /admin:
+        parent: /masked
+        type: R
+        title: rubrique administration du registre - masquée
+      /masked/version.php:
+        parent: /masked
+        type: S
+        title: script affichant la version du registre - masqué car utilisé uniquement par l'élément version
+        jsonval: |
+          echo json_encode(VERSION, JSON_OPTIONS);
+        htmlval: |
+          echo VERSION,"<br>\n";
+      /admin/version:
+        parent: /admin
+        type: E
+        title: version du code du registre
+        script: /masked/version.php
+      /admin/recentupdatelog:
+        parent: /admin
+        type: E
+        title: affichage du log des modifs. récentes du registre
+        script: /scrips/showYamlFile.php
+        jsonval:
+          filename: recentupdatelog.yaml
+      /masked/errorlog.php:
+        parent: /masked
+        type: S
+        title: script affichant le log des erreurs
+        jsonval: |
+          $limit = $_GET['limit'] ?? 20;
+          echo "[\n";
+          $first = true;
+          foreach (PgSql::query("select * from errorLog order by date desc limit $limit") as $tuple) {
+            if ($input = json_decode($tuple['input'], true))
+              $tuple['input'] = $input;
+            echo ($first?'':",\n"),json_encode($tuple, JSON_OPTIONS);
+            $first = false;
+          }
+          echo "]\n";
+        htmlval: |
+          use Symfony\Component\Yaml\Yaml;
+          $limit = $_GET['limit'] ?? 20;
+
+          echo "<pre>";
+          foreach (PgSql::query("select * from errorLog order by date desc limit $limit") as $tuple) {
+            $input = json_decode($tuple['input'], true);
+            if ($input)
+              $tuple['input'] = $input;
+            echo Yaml::dump([$tuple], 4, 2);
+          }
+      /admin/errorlog:
+        parent: /admin
+        type: E
+        title: affichage du log des erreurs
+        script: /masked/errorlog.php
+  deleteInit:
+    title: suppression des ressources créées dans le chapitre init
+    delete:
+      - /admin/errorlog
+      - /masked/errorlog.php
+      - /admin/recentupdatelog
+      - /admin/version
+      - /masked/version.php
+      - /admin
+      - /masked
+      - /api
+      - /scripts/showYamlFile.php
+      - /scripts
+  export:
+    title: chapitre d'export
+    abstract: |
+      Le chapitre export définit des scripts d'export.
+    put:
+      #/stop:
+      /scripts/exportRegistre.php:
+        parent: /scripts
+        type: S
+        title: script d'export des ressources Registre et Element
+        jsonval: |
+          echo "[\n";
+          $first = true;
+          foreach (Sql::query("select * from registre") as $tuple) {
+            if ($tuple['jsonval'] && ($jsonval = json_decode($tuple['jsonval'])))
+              $tuple['jsonval'] = $jsonval;
+            echo ($first?'':",\n"),json_encode($tuple, JSON_OPTIONS);
+            $first = false;
+          }
+          echo "]\n";
+        htmlval: |
+          use Symfony\Component\Yaml\Yaml;
+          echo "<pre>";
+          foreach (Sql::query("select * from registre") as $tuple) {
+            if ($tuple['jsonval'] && ($jsonval = json_decode($tuple['jsonval'])))
+              $tuple['jsonval'] = $jsonval;
+            echo str_replace('<','&lt;',Yaml::dump([$tuple], 99, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK));
+          }
+      /admin/exportRegistre:
+        parent: /admin
+        type: E
+        title: export des ressources Registre et Element
+        script: /scripts/exportRegistre.php
+      /scripts/exportScripts.php:
+        parent: /scripts
+        type: S
+        title: script d'export des ressources Script
+        jsonval: |
+          echo "[\n";
+          $first = true;
+          foreach (Sql::query("select * from script") as $tuple) {
+            echo ($first?'':",\n"),json_encode($tuple, JSON_OPTIONS);
+            $first = false;
+          }
+          echo "]\n";
+        htmlval: |
+          use Symfony\Component\Yaml\Yaml;
+          echo "<pre>";
+          foreach (Sql::query("select * from script") as $tuple) {
+            echo str_replace('<','&lt;',Yaml::dump([$tuple], 99, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK));
+          }
+      /admin/exportScripts:
+        parent: /admin
+        type: E
+        title: export des ressources Script
+        script: /scripts/exportScripts.php
+  deleteExport:
+    title: suppression des ressources créées par le chapitre export
+    delete:
+      - /admin/exportScripts
+      - /scripts/exportScripts.php
+      - /admin/exportRegistre
+      - /scripts/exportRegistre.php
+  deleteTests:
+    title: chapitre supprimant des éléments créés par le test
+    abstract: |
+      Le chapitre deleteTests supprime les éléments créés par le test.
+    delete:
+      - /iso/639-1/fr
+      - /iso/639-1/en
+      - /iso/639-1/es
+      - /iso/639-1/it
+      - /iso/639-1
+      - /iso/3166-1/alpha-2/FR
+      - /iso/3166-1/alpha-2/GF
+      - /iso/3166-1/alpha-2/GP
+      - /iso/3166-1/alpha-2/MQ
+      - /iso/3166-1/alpha-2/RE
+      - /iso/3166-1/alpha-2/YT
+      - /iso/3166-1/alpha-2/GP
+      - /iso/3166-1/alpha-2
+      - /iso/3166-1/alpha-3
+      - /iso/3166-1
+      - /iso
+      - /scripts/echo.php
+tests:
+  scripts:
+    - title: PUT /scripts
+      method: PUT
+      path: /scripts
+      resultCode: 200
+      content:
+        parent: ''
+        type: R
+        title: Scripts
+    - title: PUT /scripts/echo.php
+      method: PUT
+      path: /scripts/echo.php
+      resultCode: 200
+      content:
+        parent: /scripts
+        type: S
+        title: 'script simple de test'
+        jsonval: 'echo json_encode($data);'
+        htmlval: |
+          use Symfony\Component\Yaml\Yaml;
+          echo '<pre>',Yaml::dump($data),"</pre>\n";
+    - title: POST /scripts/echo.php
+      method: POST
+      path: /scripts/echo.php
+      resultCode: 200
+    - title: GET /scripts/echo.php
+      method: GET
+      path: /scripts/echo.php
+      resultCode: 200
+  put:
+    - title: PUT /iso
+      method: PUT
+      path: /iso
+      resultCode: 200
+      content:
+        parent: ''
+        type: R
+        title: Quelques valeurs définies dans quelques standards ISO
+    - title: PUT /iso/639-1 avec juste title
+      method: PUT
+      path: /iso/639-1
+      resultCode: 200
+      content:
+        parent: /iso
+        type: R
+        title: Langues définies dans ISO 639-1
+    - title: PUT /iso/639-1/fr avec juste title
+      method: PUT
+      path: /iso/639-1/fr
+      resultCode: 200
+      content:
+        parent: /iso/639-1
+        type: E
+        title: 'français title ss jsonval/htmlval'
+    - title: PUT /iso/639-1/en avec jsonval et htmlval ok
+      method: PUT
+      path: /iso/639-1/en
+      resultCode: 200
+      content:
+        parent: /iso/639-1
+        type: E
+        title: 'anglais avec json/html'
+        jsonval:
+          fr: anglais
+          en: english
+        htmlval: '<b>anglais</b>'
+    - title: PUT /iso/639-1/es avec script et jsonval
+      method: PUT
+      path: /iso/639-1/es
+      resultCode: 200
+      content:
+        parent: /iso/639-1
+        type: E
+        title: 'espagnol avec script et jsonval'
+        script: /scripts/echo.php
+        jsonval:
+          fr: espagnol
+          en: spanish
+    - title: PUT /iso/639-1/it avec jsonval sans script
+      method: PUT
+      path: /iso/639-1/it
+      resultCode: 200
+      content:
+        parent: /iso/639-1
+        type: E
+        title: italien avec jsonval sans script
+        jsonval:
+          fr: italien
+          en: italian
+        htmlval: <b>italien</b>
+    - title: PUT /iso/639-1/x avec erreur sur le contenu pas du JSON
+      method: PUT
+      path: /iso/639-1/xx
+      resultCode: 400
+      content: xxx
+    - title: PUT /iso/639-1/x avec erreur sur type
+      method: PUT
+      path: /iso/639-1/xx
+      resultCode: 400
+      content:
+        parent: /iso/639-1
+        title: 'espagnol avec script et jsonval'
+        script: /scripts/echo.php
+        jsonval:
+          fr: espagnol
+          en: spanish
+  get:
+    - title: GET /iso/639-1 -> registre
+      method: GET
+      path: /iso/639-1
+      resultCode: 200
+    - title: GET /iso/639-1/fr -> français title ss jsonval/htmlval
+      method: GET
+      path: /iso/639-1/fr
+      resultCode: 200
+    - title: GET /iso/639-1/en -> anglais avec jsonval/htmlval
+      method: GET
+      path: /iso/639-1/en
+      resultCode: 200
+    - title: GET /iso/639-1/es -> espagnol avec script
+      method: GET
+      path: /iso/639-1/es
+      resultCode: 200
+    - title: GET /iso/639-1/xx en html -> erreur
+      method: GET
+      path: /iso/639-1/xx
+      resultCode: 404
+  delete:
+    - title: DELETE /iso/639-1/fr
+      method: DELETE
+      path: /iso/639-1/fr
+      resultCode: 200
+    - title: DELETE /iso/639-1/fr no 2 -> 404
+      method: DELETE
+      path: /iso/639-1/fr
+      resultCode: 404
+    - title: PUT /iso/639-1/fr avec juste title
+      method: PUT
+      path: /iso/639-1/fr
+      resultCode: 200
+      content:
+        parent: /iso/639-1
+        type: E
+        title: 'français title ss jsonval/htmlval'
+  post:
+    - title: POST /iso/639-1
+      method: POST
+      path: /iso/639-1
+      resultCode: 200
+    - title: POST /iso/639-1/fr
+      method: POST
+      path: /iso/639-1/fr
+      resultCode: 200
+    - title: POST /iso/639-1/en
+      method: POST
+      path: /iso/639-1/en
+      resultCode: 200
+    - title: POST /iso/639-1/es
+      method: POST
+      path: /iso/639-1/es
+      resultCode: 200
+    - title: POST /iso/639-1/it
+      method: POST
+      path: /iso/639-1/it
+      resultCode: 200
+    - title: POST /iso/639-1/xx
+      method: POST
+      path: /iso/639-1/xx
+      resultCode: 404
+  pgp: # registre avec jsonval et htmlval # PUT/GET/POST registre avec jsonval et htmlval 
+    - title: PUT /iso/3166-1 avec jsonval et htmlval
+      method: PUT
+      path: /iso/3166-1
+      resultCode: 200
+      content:
+        parent: /iso
+        type: R
+        title: ISO 3166-1  - codification des pays
+        jsonval:
+          fr: codification des pays
+          en: "Codes for the representation of names of countries and their subdivisions – Part 1: Country codes"
+        htmlval: '<b>codification des pays</b>'
+    - title: PUT /iso/3166-1/alpha-2
+      method: PUT
+      path: /iso/3166-1/alpha-2
+      resultCode: 200
+      content:
+        parent: /iso/3166-1
+        type: R
+        title: ISO 3166-1 - codification des pays sur 2 caractères
+        jsonval:
+          fr: codification des pays sur 2 caractères
+          en: with 2 characters
+        htmlval: '<b>codification des pays sur 2 caractères</b>'
+    - title: PUT /iso/3166-1/alpha-2/FR
+      method: PUT
+      path: /iso/3166-1/alpha-2/FR
+      resultCode: 200
+      content:
+        parent: /iso/3166-1/alpha-2
+        type: E
+        title: France
+    - title: PUT /iso/3166-1/alpha-2/GF
+      method: PUT
+      path: /iso/3166-1/alpha-2/GF
+      resultCode: 200
+      content:
+        parent: /iso/3166-1/alpha-2
+        type: E
+        title: Guyane française
+    - title: GET /iso/3166-1/alpha-2
+      method: GET
+      path: /iso/3166-1/alpha-2
+      resultCode: 200
+    - title: POST /iso/3166-1/alpha-2
+      method: POST
+      path: /iso/3166-1/alpha-2
+      resultCode: 200
+    - title: PUT /iso/3166-1/alpha-3
+      method: PUT
+      path: /iso/3166-1/alpha-3
+      resultCode: 200
+      content:
+        parent: /iso/3166-1
+        type: R
+        title: ISO 3166-1 codification des pays sur 3 caractères
+        jsonval:
+          fr: codification des pays sur 3 caractères
+          en: with 3 characters
+        htmlval: '<b>codification des pays sur 3 caractères</b>'
+    - title: GET /iso/3166-1/alpha-3
+      method: GET
+      path: /iso/3166-1/alpha-3
+      resultCode: 200
+    - title: POST /iso/3166-1/alpha-3
+      method: POST
+      path: /iso/3166-1/alpha-3
+      resultCode: 200
+  load:
+    - title: bulkLoad ok
+      method: POST
+      path: /bulkLoad
+      resultCode: 200
+      content:
+        - path: /iso/3166-1/alpha-2/GP
+          parent: /iso/3166-1/alpha-2
+          type: E
+          title: Guadeloupe
+        - path: /iso/3166-1/alpha-2/MQ
+          parent: /iso/3166-1/alpha-2
+          type: E
+          title: Martinique
+        - path: /iso/3166-1/alpha-2/RE
+          parent: /iso/3166-1/alpha-2
+          type: E
+          title: La Réunion
+        - path: /iso/3166-1/alpha-2/YT
+          parent: /iso/3166-1/alpha-2
+          type: E
+          title: Mayotte
+    - title: bulkLoad KO
+      method: POST
+      path: /bulkLoad
+      resultCode: 400
+      content:
+        - path: /iso/3166-1/alpha-2/GP # ok
+          parent: /iso/3166-1/alpha-2
+          type: E
+          title: Guadeloupe
+        - path: /iso/3166-1/alpha-2/G'P # path incorrect
+          parent: /iso/3166-1/alpha-2
+          type: E
+          title: Guadeloupe
+        - parent: /iso/3166-1/alpha-2 # manque path
+          type: E
+          title: Guadeloupe
+        - path: /iso/3166-1/alpha-2/MQ # manque type
+          parent: /iso/3166-1/alpha-2
+          title: Martinique
+        - path: /iso/3166-1/alpha-2/RE # manque parent
+          type: E
+          title: La Réunion
+        - path: /iso/3166-1/alpha-2/YT # manque title
+          parent: /iso/3166-1/alpha-2
+          type: E
+    - title: POST bulkLoad
+      method: POST
+      path: /bulkLoad
+      resultCode: 404
+  
+eof:

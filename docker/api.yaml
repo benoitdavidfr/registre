@@ -1,0 +1,395 @@
+openapi: 3.0.0
+info:
+  version: '0.1'
+  title: API du registre MTE
+  description: |
+    Définition de l'API d'un registre simple répondant à certains besoins du MTE.
+    Il est composé de 3 types de ressources:
+
+      - des *registres* qui contiennent d'autres ressources,
+      - des *éléments* qui contiennent l'information élémentaire exposée en HTML et en JSON,
+      - des *scripts* qui permettent de convertir l'information stockée pour l'exposer au travers du GET.
+        Une ressource de type script correspond à un script Php de génération HTML et un autre de génération JSON.
+
+    Il y a 3 façons de définir le contenu d'un élément:
+
+      - la plus simple est uniquement de lui associer un titre,
+      - une façon plus complexe et de lui associer en plus une représentation JSON et une représentation HTML,
+      - enfin, plus complexe, de lui associer une représentation interne JSON et des scripts Php générant
+        les représentations externes en JSON et en HTML à partir de la représentation interne.
+    
+    4 méthodes peuvent être utilisées sur un URI désignant une ressource:
+      
+      - GET pour obtenir la ressource mise en forme soit en HTML, soit en JSON,
+      - PUT pour créer ou remplacer la ressource,
+      - DELETE pour supprimer la ressource,
+      - POST pour obtenir la représentation interne de la ressource.
+    
+    Ceci est un protype pour lequel il n'y a aucun engagement de qualité de service ou de pérennité.
+  contact:
+    name: Benoit DAVID - MTE/CGDD
+    email: contact@geoapi.fr
+servers:
+  - description: Serveur de pré-prod
+    url: https://regpprod.georef.eu
+  - description: Serveur de prod
+    url: https://registre.georef.eu
+paths:
+  /{id}:
+    description: |
+      Le chemin désigne la ressource qui est l'objet de la requête.  
+      Les opérations s'appliquent sur cette ressource.
+    get:
+      operationId: getResource
+      summary: accès au contenu formatté d'une ressource
+      parameters:
+        - in: path
+          name: id
+          description: identifiant de la ressource, en fait l'id contient le / initial
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: contenu de la ressource
+          content:
+            text/html:
+              schema:
+                type: string
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetResponse'
+        400:
+          description: erreur, caractère interdit dans l'URI
+          content:
+            text/plain:
+              schema:
+                description: message d'erreur
+                type: string
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+        404:
+          description: erreur, la ressource n'a pas été trouvée
+          content:
+            text/plain:
+              schema:
+                description: message d'erreur
+                type: string
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+        500:
+          description: erreur interne à l'API
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+    put:
+      operationId: putResource
+      summary: création ou modification d'une ressource. Nécessite une authentification Http Basic
+      parameters:
+        - in: path
+          name: id
+          description: identifiant de la ressource, en fait l'id contient le / initial
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Définition de la ressource à créer ou à modifier
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutRequest'
+            examples:
+              registreSimple:
+                summary: Exemple du registre /iso/639-1 avec uniquement title
+                value:
+                  parent: /iso
+                  type: R
+                  title: Langues définies dans ISO 639-1
+                  script: ''
+                  jsonval: ''
+                  htmlval: ''
+              eltSimple:
+                summary: Exemple de l'élément simple /iso/639-1/fr avec uniquement title
+                value:
+                  parent: /iso/639-1
+                  type: E
+                  title: français
+                  script: ''
+                  jsonval: ''
+                  htmlval: ''
+              eltPlusComplexe:
+                summary: Exemple de l'élément /iso/639-1/en avec jsonval et htmlval
+                value:
+                  parent: /iso/639-1
+                  type: E
+                  title: anglais
+                  script: ''
+                  jsonval: {fr: anglais, en: english}
+                  htmlval: '<b>anglais</b>'
+              script:
+                summary: Exemple du script /scripts/echo.php
+                value:
+                  parent: /scripts
+                  type: S
+                  title: script simple de test
+                  script: ''
+                  jsonval: "echo json_encode($data);"
+                  htmlval": "echo json_encode($data);"
+              eltDefiniAvecScript:
+                summary: Exemple de l'élément /iso/639-1/es défini avec un script
+                value:
+                  parent: /iso/639-1
+                  type: E
+                  title: espagnol
+                  script: /scripts/echo.php
+                  jsonval: {fr: espagnol, en: spanish}
+      responses:
+        200:
+          description: la ressource a été créée ou modifiée
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutResponse'
+        400:
+          description: erreur, la description de la ressource est incorrecte
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+        401:
+          description: erreur, authentification incorrecte
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+        500:
+          description: erreur interne à l'API
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+    delete:
+      operationId: deleteResource
+      summary: suppression d'une ressource. Nécessite une authentification Http Basic
+      parameters:
+        - in: path
+          name: id
+          description: identifiant de la ressource, en fait l'id contient le / initial
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: la ressource a été supprimée oou n'existe pas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteResponse'
+        400:
+          description: erreur, caractère interdit dans l'URI
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+        401:
+          description: erreur, authentification incorrecte
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+    post:
+      operationId: postResource
+      summary: récupération des propriétés de la ressource
+      parameters:
+        - in: path
+          name: id
+          description: identifiant de la ressource, en fait l'id contient le / initial
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: contenu de la ressource
+          content:
+            text/html:
+              schema:
+                type: string
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+        400:
+          description: erreur, caractère interdit dans l'URI
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+        404:
+          description: erreur, la ressource n'a pas été trouvée
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: message d'erreur
+                    type: string
+
+components:
+  schemas:
+    GetResponse:
+      description: Contenu retourné par une opération GET, peut être un objet JSON quelconque
+      type: object
+    PutRequest:
+      description: Contenu transmis pour une opération PUT
+      type: object
+      required: [parent, type, title]
+      properties:
+        parent:
+          description: chemin de l'URI parente, utilisé pour naviguer dans le registre
+          type: string
+        type:
+          description: type de ressource
+          type: string
+          enum:
+            - E # élément
+            - R # registre
+            - S # script
+        title:
+          description: titre de la ressource, utilisé pour naviguer dans le registre
+          type: string
+        script:
+          description: |
+            Pour un élément ou un registre, id des scripts à utiliser pour générer les sorties GET,
+            doit être vide ou l'id d'un script dans le registre.
+            Est ignoré pour un script.
+          type: string
+        jsonval:
+          description: |
+            Pour un élément ou un registre, valeur JSON ou chaine vide.
+            Si vide ou absente alors la représentation externe sera définie à partir du titre.
+            Contient la représentation externe de la ressource si la propriété script n'est pas définie.
+            Si la propriété script est définie alors contient la représentation interne de la ressource
+            qui sera fournie en entrée aux scripts.
+            Pour un script contient une chaîne correspondant au code Php générant la représentation externe JSON.
+        htmlval:
+          description: |
+            Pour un élément ou un registre, texte HTML ou chaine vide.
+            Si vide ou absente alors la représentation externe sera définie à partir du titre.
+            Contient la représentation externe de la ressource en HTML si la propriété script n'est pas définie.
+            Ignorée si la propriété script est défini.
+            Pour un script contient une chaine correspondant au code Php générant la représentation externe HTML.
+          type: string
+    PutResponse:
+      description: Contenu retourné par une opération PUT
+      type: object
+      properties:
+        method:
+          description: méthode de l'opération
+          type: string
+          enum: [PUT]
+        id:
+          description: chemin de l'URI
+          type: string
+        input:
+          $ref: '#/components/schemas/PutRequest'
+        return:
+          description: la chaine 'ok'
+          type: string
+          enum: [ok]
+    DeleteResponse:
+      description: Contenu retourné par une opération DELETE
+      type: object
+      properties:
+        method:
+          description: méthode de l'opération
+          type: string
+          enum: [DELETE]
+        id:
+          description: chemin de l'URI
+          type: string
+        return:
+          description: la chaine 'ok'
+          type: string
+          enum: [ok]
+    PostResponse:
+      description: Contenu retourné par une opération POST
+      type: object
+      required: [id, parent, type, title]
+      properties:
+        id:
+          description: chemin de l'URI
+          type: string
+        parent:
+          description: chemin de l'URI parente, utilisé pour naviguer dans le registre
+          type: string
+        type:
+          description: type de ressource, 'E' pour élément, 'R' pour registre et 'S' pour script
+          type: string
+          enum:
+            - E # élément
+            - R # registre
+            - S # script
+        title:
+          description: titre de la ressource, utilisé pour naviguer dans le registre
+          type: string
+        script:
+          description: |
+            Pour un élément ou un registre, id des scripts à utiliser pour générer les sorties GET,
+            doit être vide ou l'id d'un script dans le registre.
+            Est ignoré pour un script.
+          type: string
+        jsonval:
+          description: |
+            Pour un élément ou un registre, valeur JSON ou chaine vide.
+            Si vide ou absente alors la représentation externe sera définie à partir du titre.
+            Contient la représentation externe de la ressource si la propriété script n'est pas définie.
+            Si la propriété script est définie alors contient la représentation interne de la ressource
+            qui sera fournie en entrée aux scripts.
+            Pour un script contient une chaîne correspondant au code Php générant la représentation externe JSON.
+        htmlval:
+          description: |
+            Pour un élément ou un registre, texte HTML ou chaine vide.
+            Si vide ou absente alors la représentation externe sera définie à partir du titre.
+            Contient la représentation externe de la ressource en HTML si la propriété script n'est pas définie.
+            Ignorée si la propriété script est défini.
+            Pour un script contient une chaine correspondant au code Php générant la représentation externe HTML.
+          type: string
