@@ -1,0 +1,18 @@
+# docker-compose pour l'utilisation locale avec Traefik du registre en mode dev ou prod
+version: '3'
+services:
+  registre:
+    image: registre
+    expose: [80]
+    env_file:
+      - dcvar-ovh.env # base OVH, schéma public
+      #- dcvar-local.env # utilisation d'une base locale avec un schema <> public
+    #volumes:
+    #  - ${PWD}/docker:/var/www/html # à utiliser en mode développement
+    labels:
+      traefik.http.routers.registre.rule: Host(`registre`)
+    networks:
+      - dockerc_default
+networks:
+  dockerc_default:
+    external: true
