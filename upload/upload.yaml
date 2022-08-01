@@ -45,7 +45,7 @@ chapters:
         parent: ''
         type: E
         title: Description OAS 3.0.0 de l'API
-        script: /scrips/showYamlFile.php
+        script: /scripts/showYamlFile.php
         jsonval:
           filename: api.yaml
       /masked:
@@ -73,7 +73,7 @@ chapters:
         parent: /admin
         type: E
         title: affichage du log des modifs. récentes du registre
-        script: /scrips/showYamlFile.php
+        script: /scripts/showYamlFile.php
         jsonval:
           filename: recentupdatelog.yaml
       /masked/errorlog.php:
@@ -133,7 +133,7 @@ chapters:
         jsonval: |
           echo "[\n";
           $first = true;
-          foreach (Sql::query("select * from registre") as $tuple) {
+          foreach (PgSql::query("select * from registre") as $tuple) {
             if ($tuple['jsonval'] && ($jsonval = json_decode($tuple['jsonval'])))
               $tuple['jsonval'] = $jsonval;
             echo ($first?'':",\n"),json_encode($tuple, JSON_OPTIONS);
@@ -143,7 +143,7 @@ chapters:
         htmlval: |
           use Symfony\Component\Yaml\Yaml;
           echo "<pre>";
-          foreach (Sql::query("select * from registre") as $tuple) {
+          foreach (PgSql::query("select * from registre") as $tuple) {
             if ($tuple['jsonval'] && ($jsonval = json_decode($tuple['jsonval'])))
               $tuple['jsonval'] = $jsonval;
             echo str_replace('<','&lt;',Yaml::dump([$tuple], 99, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK));
@@ -160,7 +160,7 @@ chapters:
         jsonval: |
           echo "[\n";
           $first = true;
-          foreach (Sql::query("select * from script") as $tuple) {
+          foreach (PgSql::query("select * from script") as $tuple) {
             echo ($first?'':",\n"),json_encode($tuple, JSON_OPTIONS);
             $first = false;
           }
@@ -168,7 +168,7 @@ chapters:
         htmlval: |
           use Symfony\Component\Yaml\Yaml;
           echo "<pre>";
-          foreach (Sql::query("select * from script") as $tuple) {
+          foreach (PgSql::query("select * from script") as $tuple) {
             echo str_replace('<','&lt;',Yaml::dump([$tuple], 99, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK));
           }
       /admin/exportScripts:

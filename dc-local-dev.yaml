@@ -1,4 +1,6 @@
-# docker-compose pour l'utilisation locale avec Traefik du registre en mode dev ou prod
+# dc-local-dev.yaml - Benoit DAVID - 17/7/2022
+# fichier docker-compose pour l'utilisation locale du registre avec Traefik, en mode dev ou prod, avec base OVH ou locale
+# le registre peut être utilisé en local sur http://registre/
 version: '3'
 services:
   registre:

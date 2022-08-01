@@ -1,0 +1,2164 @@
+-
+  id: ''
+  parent: ''
+  type: R
+  title: Racine
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /scripts
+  parent: ''
+  type: R
+  title: 'Registre des scripts'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /api
+  parent: ''
+  type: E
+  title: "Description OAS 3.0.0 de l'API"
+  script: /scripts/showYamlFile.php
+  jsonval: null
+  htmlval: null
+-
+  id: /masked
+  parent: /masked
+  type: R
+  title: 'rubrique masquée contenant les rubriques masquées'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /admin
+  parent: /masked
+  type: R
+  title: 'rubrique administration du registre - masquée'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /admin/version
+  parent: /admin
+  type: E
+  title: 'version du code du registre'
+  script: /masked/version.php
+  jsonval: null
+  htmlval: null
+-
+  id: /admin/recentupdatelog
+  parent: /admin
+  type: E
+  title: 'affichage du log des modifs. récentes du registre'
+  script: /scripts/showYamlFile.php
+  jsonval: null
+  htmlval: null
+-
+  id: /admin/errorlog
+  parent: /admin
+  type: E
+  title: 'affichage du log des erreurs'
+  script: /masked/errorlog.php
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/parc-de-logements
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Parc de logements'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-de-logements'>themes:parc-de-logements</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Parc de logements"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Résidences principales collectives, logements vacants, résidences secondaires"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Parc Logements"@fr, "parc-logements"@fr, "logements-vacants"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-b
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Non communicable - atteinte au secret de la défense nationale (CRPA, L311-5 2°b)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /admin/exportRegistre
+  parent: /admin
+  type: E
+  title: 'export des ressources Registre et Element'
+  script: /scripts/exportRegistre.php
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres
+  parent: ''
+  type: R
+  title: 'Registre Ecosphère(s)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/persons
+  parent: /ecospheres
+  type: R
+  title: 'Registre Ecosphère(s) des personnes'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /admin/exportScripts
+  parent: /admin
+  type: E
+  title: 'export des ressources Script'
+  script: /scripts/exportScripts.php
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/syntax
+  parent: /ecospheres
+  type: E
+  title: 'Définition des propriétés RDF spécifiques à Ecosphères (en cours)'
+  script: null
+  jsonval: null
+  htmlval: "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>Propriétés RDF spécifiques à Ecosphères</title></head><body><div id='regexp'><code>http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp</code> Associe une expression régulière à un thème Ecosphères.</div></body>"
+-
+  id: /ecospheres/themes-ecospheres
+  parent: /ecospheres
+  type: E
+  title: "Liste des thèmes d'Ecosphères"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#ConceptScheme'>skos:ConceptScheme</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#hasTopConcept'>skos:hasTopConcept</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat'>themes:climat</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol'>themes:foncier-et-occupation-du-sol</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication'>themes:reseaux-d-energie-et-de-communication</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie'>themes:industrie</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://purl.org/dc/terms/title'>dct:title</a> "Liste des thèmes d'Ecosphères"@fr;
+      <a href='http://purl.org/dc/terms/description'>dct:description</a> "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  
+    Ils sont construits à partir de l'arborescence Covadis et sont structurés comme un thésaurus
+    conformément au [standard SKOS du W3C](https://www.w3.org/2004/02/skos/).  
+    A chaque concept sont associés:
+      
+      - des altLabels correspondant aux mots-clés rencontrés dans les catalogues moissonnés par le guichet,
+      - des expressions régulières permettant d'associer des fiches de métadonnées des catalogues
+        moissonnés par le guichet,
+      - une correspondance avec
+        [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)
+        dans la mesure du possible.
+    La constitution de ce thésaurus est en cours.  
+    Version intermédiaire publiée par Benoit DAVID le 17/7/2022.
+    "@fr;
+      <a href='http://purl.org/dc/terms/creator'>dct:creator</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/BenoitDavid'>persons:BenoitDavid</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/LeslieLemaire'>persons:LeslieLemaire</a>;
+      <a href='http://purl.org/dc/terms/contributor'>dct:contributor</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/GillesGuillouet'>persons:GillesGuillouet</a>;
+      <a href='http://purl.org/dc/terms/modified'>dct:modified</a> "2022-07-17";
+      <a href='http://purl.org/dc/terms/license'>dct:license</a> <https://www.etalab.gouv.fr/licence-ouverte-open-licence>.
+    </pre>
+-
+  id: /ecospheres/persons/BenoitDavid
+  parent: /ecospheres/persons
+  type: E
+  title: 'Benoît David'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/BenoitDavid'>persons:BenoitDavid</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://xmlns.com/foaf/0.1/Person'>foaf:Person</a>;
+      <a href='http://xmlns.com/foaf/0.1/name'>foaf:name</a> "Benoît David".
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/topographie-en-mer
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Topographie en mer et sur le littoral'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/topographie-en-mer'>themes:topographie-en-mer</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Topographie en mer et sur le littoral"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
+    marées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,
+    sites industriels, amers remarquables, cartes de navigation électroniques
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Topographie"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Ouvrages statiques littoraux"@fr, "Ouvrages et aménagements littoraux"@fr, "Ouvrages côtiers"@fr, "Nature des côtes"@fr, "Défenses de côtes"@fr, "accès au DPM"@fr, "Accès au littoral"@fr, "Ortho-littorale"@fr, "Ortho littorale"@fr, "prises d'eau de mer"@fr, "Sentier du Littoral"@fr, "Artificialisation côte"@fr, "exutoires"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-c
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Non communicable - atteinte à la conduite de la politique extérieure de la France (CRPA, L311-5 2°c)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/climat
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Climat
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat'>themes:climat</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Climat"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/6011'>eurovoc:6011</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "air-climat"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#changeNote'>skos:changeNote</a> "Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique'>themes:changement-climatique</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/meteorologie'>themes:meteorologie</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/changement-climatique
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Changement climatique'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique'>themes:changement-climatique</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat'>themes:climat</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Changement climatique"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/5482'>eurovoc:5482</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Air Climat/Changement climatique"@fr, "climat-air-et-energie"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Plans? Climat-Energie"@fr, "Plan Climat Air Energie territorr?ial"@fr, "Air, Énergie et Climat"@fr, "PCAET"@fr, "Plans de Protection de l'Atmosphère"@fr, "SRCAE"@fr, "territoires? à énergie positive"@fr.
+    </pre>
+-
+  id: /ecospheres/persons/GillesGuillouet
+  parent: /ecospheres/persons
+  type: E
+  title: 'Gilles Guillouet'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/GillesGuillouet'>persons:GillesGuillouet</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://xmlns.com/foaf/0.1/Person'>foaf:Person</a>;
+      <a href='http://xmlns.com/foaf/0.1/name'>foaf:name</a> "Gilles Guillouet".
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/nature-paysages-et-biodiversite
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Nature, paysages et biodiversité'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Nature, paysages et biodiversité"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite'>themes:inventaires-nature-et-biodiversite</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-des-paysages'>themes:inventaires-des-paysages</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature'>themes:protection-et-gestion-de-la-nature</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-des-paysages'>themes:protection-et-gestion-des-paysages</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse'>themes:chasse</a>.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-d
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Non communicable - atteinte à la sûreté de l'Etat, à la sécurité publique, à la sécurité des personnes ou à la sécurité des systèmes d'information des administrations (CRPA, L311-5 2°d)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/eurovoc/1892
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: météorologie
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/1892'>eurovoc:1892</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "météorologie"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/servitudes-d-utilite-publique
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Servitudes d'utilité publique"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/servitudes-d-utilite-publique'>themes:servitudes-d-utilite-publique</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Servitudes d'utilité publique"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Aménagement Urbanisme/Assiette Servitude"@fr, "servitude-d-utilite-publique"@fr, "ASSIETTE SERVITUDE"@fr, "amenagement_urbanisme/n_assiette_servitude"@fr, "n_assiette_servitudes"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Assiettes? de servitude"@fr, "Servitudes des sites naturels"@fr, "AC2"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/inventaires-des-paysages
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Inventaires des paysages'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-des-paysages'>themes:inventaires-des-paysages</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Inventaires des paysages"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-e
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Non communicable - atteinte à la monnaie et au crédit public (CRPA, L311-5 2°e)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/etablissements-d-activites
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Établissements d'activités"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Établissements d'activités"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-enseignement'>themes:etablissements-d-enseignement</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels'>themes:equipements-sportifs-ou-culturels</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/patrimoine-culturel'>themes:patrimoine-culturel</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux'>themes:etablissements-de-sante-et-medico-sociaux</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme'>themes:equipements-de-tourisme</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public'>themes:autres-etablissements-recevant-du-public</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/etudes
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Études
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etudes'>themes:etudes</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Études"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Aménagement Urbanisme/Zonages Étude"@fr, "Aménagement Urbanisme / Zonages Étude"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Unités? urbaines?"@fr, "Taches? urbaines?"@fr, "Aires? urbaines?"@fr, "IRIS"@fr, "Zone d'emploi"@fr.
+    </pre>
+-
+  id: /ecospheres/eurovoc/607
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: 'eau potable'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/607'>eurovoc:607</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "eau potable"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/dechets
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Déchets
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/dechets'>themes:dechets</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Déchets"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-f
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Non communicable - atteinte au déroulement des procédures engagées devant les juridictions ou d'opérations préliminaires à de telles procédures (CRPA, L311-5 2°f)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Équipements sportifs ou culturels'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels'>themes:equipements-sportifs-ou-culturels</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Équipements sportifs ou culturels"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Culture Société Service/Équipement sportif ou culturel"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Équipements culturels et socio culturels"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Établissements de santé et médico-sociaux'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux'>themes:etablissements-de-sante-et-medico-sociaux</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Établissements de santé et médico-sociaux"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Culture Société Service/Santé Social"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "E\.P\.A\.D\."@fr, "EPAD"@fr, "Fonctions médicales et paramédicales"@fr, "Établissements et services de santé"@fr, "Établissements? d'accueil de la petite enfance"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/reseau-electrique
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Réseau électrique'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-electrique'>themes:reseau-electrique</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication'>themes:reseaux-d-energie-et-de-communication</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réseau électrique"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-g
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Non communicable - atteinte à la recherche et à la prévention, par les services compétents, d'infractions de toute nature (CRPA, L311-5 2°g)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/eurovoc/597
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: eau
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/597'>eurovoc:597</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "eau"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Autres établissements recevant du public'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public'>themes:autres-etablissements-recevant-du-public</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Autres établissements recevant du public"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Culture Société Service/ERP Autre"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Stations? de distribution de carburants?"@fr, "cimetière"@fr, "Etablissements Recevant du Public"@fr, "Grandes surfaces"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/alimentation-en-eau-potable
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Alimentation en eau potable'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/alimentation-en-eau-potable'>themes:alimentation-en-eau-potable</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Alimentation en eau potable"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/607'>eurovoc:607</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/AEP"@fr, "step"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "AEP"@fr, "eau potable"@fr, "Périmètres? de protection immédiats?"@fr, "Périmètres? de protection rapprochés?"@fr, "Aires? d'alimentation des? captages?"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/prevention-des-inondations
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention des inondations'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-inondations'>themes:prevention-des-inondations</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention des inondations"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-h
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Non communicable - atteinte, sous réserve de l'article L. 124-4 du code de l'environnement, aux autres secrets protégés par la loi (CRPA, L311-5 2°h)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/eurovoc/260
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "cours d'eau"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/260'>eurovoc:260</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau'>themes:masses-d-eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "cours d'eau"@fr.
+    </pre>
+-
+  id: /ecospheres/eurovoc/4485
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: "traitement de l'eau"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/4485'>eurovoc:4485</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "traitement de l'eau"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/masses-d-eau
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Masses d'eau"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau'>themes:masses-d-eau</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Masses d'eau"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
+    eau souterraine, connaissance des zones, humides, ...)
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Masse d'eau"@fr, "eau/n_masse_eau"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "masses? d'eau"@fr, "Tronçons hydrographiques"@fr, "Cours d'eau"@fr, "Plans? d'eau"@fr, "Etang"@fr, "Zones? humides?"@fr, "Milieux? humides?"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrowMatch'>skos:narrowMatch</a> <a href='http://eurovoc.europa.eu/260'>eurovoc:260</a>, <a href='http://eurovoc.europa.eu/609'>eurovoc:609</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/prevention-du-risque-minier
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention du risque minier'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-minier'>themes:prevention-du-risque-minier</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention du risque minier"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-6-1-vp
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Communicable au seul intéressé - atteinte à la protection de la vie privée (CRPA, L311-6 1°)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Surveillance de la ressource en eau'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau'>themes:surveillance-de-la-ressource-en-eau</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Surveillance de la ressource en eau"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "points de mesure, effractions constatées, ..."@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Surveillance"@fr, "hydrometrie"@fr, "prevision-de-crue"@fr, "hydrologie"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Vigicrues"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/peche-en-eaux-interieures
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Pêche en eaux intérieures'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/peche-en-eaux-interieures'>themes:peche-en-eaux-interieures</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Pêche en eaux intérieures"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Réserve de pêche, police de la pêche,… (en eaux intérieures)
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/3338'>eurovoc:3338</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Pêche"@fr, "Eau / Pêche"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/prevention-des-risques-technologiques
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention des risques technologiques'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-risques-technologiques'>themes:prevention-des-risques-technologiques</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention des risques technologiques"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-6-1-sm
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Communicable au seul intéressé - atteinte à la protection du secret médical (CRPA, L311-6 1°)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/protection-de-l-eau
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Protection de l'eau"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-de-l-eau'>themes:protection-de-l-eau</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Protection de l'eau"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,
+    zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
+    contrats de rivière, SAGE
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/6398'>eurovoc:6398</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#changeNote'>skos:changeNote</a> "Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'."@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Zonages Eau"@fr, "eau/n_zonages_eau"@fr, "zonages eau"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Schémas? d'Aménagement et de Gestion des Eaux"@fr, "SAGE"@fr, "Zones? sensibles?"@fr, "Zones? Vulnérables?"@fr, "Zones? d'Actions? Renforcées? Nitrate"@fr, "protection des eaux contre la pollution par les nitrates"@fr, "Cours d'eau Classement"@fr, "Classement piscicole des cours d'eau"@fr, "Zones? de répartition des eaux"@fr, "ZRE"@fr, "frayères"@fr, "Plan de Gestion de la Ressource en Eau"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/foncier-et-occupation-du-sol
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Foncier et occupation du sol'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol'>themes:foncier-et-occupation-du-sol</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Foncier et occupation du sol"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-agricole'>themes:foncier-agricole</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mutation-fonciere'>themes:mutation-fonciere</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-du-sol'>themes:occupation-du-sol</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/propriete-fonciere'>themes:propriete-fonciere</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/gestion-du-risque
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Gestion du risque'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/gestion-du-risque'>themes:gestion-du-risque</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Gestion du risque"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-6-1-sa
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Communicable au seul intéressé - atteinte à la protection du secret des affaires (CRPA, L311-6 1°)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/occupation-du-sol
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Occupation du sol'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-du-sol'>themes:occupation-du-sol</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol'>themes:foncier-et-occupation-du-sol</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Occupation du sol"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Foncier Sol/Occupation du sol"@fr, "usage du sol"@fr, "OCCUPATION SOL"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Occupation des sols"@fr, "Occupation du sol"@fr, "Corine Land Cover"@fr, "Espaces bâtis"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Habitat et politique de la ville'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Habitat et politique de la ville"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/accession-a-la-propriete'>themes:accession-a-la-propriete</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/besoins-en-logements'>themes:besoins-en-logements</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/construction'>themes:construction</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-indigne'>themes:habitat-indigne</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-des-logements'>themes:occupation-des-logements</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-locatif-social'>themes:parc-locatif-social</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-de-logements'>themes:parc-de-logements</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-de-la-ville'>themes:politique-de-la-ville</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/renovation-urbaine'>themes:renovation-urbaine</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/besoins-en-logements
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Besoins en logements'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/besoins-en-logements'>themes:besoins-en-logements</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Besoins en logements"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Demande de logement social, accueil des gens du voyage"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Besoins en logement"@fr, "gens-du-voyage"@fr, "gens-voyage"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "gens du voyage"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/habitat-indigne
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Habitat indigne'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-indigne'>themes:habitat-indigne</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Habitat indigne"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Inventaire de l'habitat susceptible d'être indigne"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Habitat indigne"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-6-2
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Communicable au seul intéressé - appréciation ou jugement de valeur sur une personne physique désignée ou facilement identifiable (CRPA, L311-6 2°)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/parc-locatif-social
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Parc locatif social'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-locatif-social'>themes:parc-locatif-social</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Parc locatif social"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Parc locatif social"@fr, "bailleurs-sociaux"@fr, "logement-locatif-social"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "hébergement d'urgence"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/politique-de-la-ville
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Politique de la ville'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-de-la-ville'>themes:politique-de-la-ville</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Politique de la ville"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,
+    quartier prioritaire, Programme local de l'habitat (PLH),
+    Contrat urbain de cohésion sociale (CUCS) ...
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Politique"@fr, "politique-de-la-ville"@fr, "ZUS"@fr, "habitat_politique_de_la_ville/n_politique"@fr, "logement politique de la ville : politique de la ville"@fr, "CUCS"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Quartiers? prioritaires?"@fr, "Contrat urbain de cohésion sociale"@fr, "ZUS"@fr, "SRU"@fr, "ZRU"@fr, "PRU"@fr, "Programmes? loca(l|ux) de l'habitat"@fr, "PLH"@fr, "Opération programmée d'amélioration de l'habitat"@fr, "Opération Programmée pour l'Amélioration de l'Habitat"@fr, "OPAH"@fr, "Programme d'intérêt général \(PIG\) habitat"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/zonages-d-amenagement
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Zonages d'aménagement"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/zonages-d-amenagement'>themes:zonages-d-amenagement</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Zonages d'aménagement"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Aménagement Urbanisme/Zonages Aménagement"@fr, "zonages aménagement"@fr, "zonages-amenagement"@fr, "zonages-zonages-amenagement"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Parcs? naturels? régiona(l|ux)"@fr, "PNR"@fr, "Zones? de revitalisation rurale"@fr, "ZRR"@fr, "Périmètres? des Pays"@fr, "Contrat de relance et de transition écologique"@fr, "CRTE"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-2-dp
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Communicable à la discrétion de l'administration - document préparatoire à une décision administrative en court d'élaboration (CRPA, L311-2 §2)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/mer-et-littoral
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Mer et littoral'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Mer et littoral"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#changeNote'>skos:changeNote</a> "Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
+    et 'Autres activités' remontés dans le thème parent de 1er niveau.
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Culture marine"@fr, "crustaces"@fr, "bulots"@fr, "moules"@fr, "autres-coquillages"@fr, "aquaculture"@fr, "Mer Littoral/Pêche maritime"@fr, "peche"@fr, "Mer Littoral/Autres activités"@fr, "dragues"@fr, "granulats-marins"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "conchylicole"@fr, "Concessions? de cultures marines"@fr, "parcs ostréicoles"@fr, "Parcs à palourdes"@fr, "Gisements de coquillages"@fr, "Gisements coquillers"@fr, "Classement sanitaire des zones conchylicoles"@fr, "mytilicole"@fr, "Zones de pêche"@fr, "Réserve de pêche"@fr, "Limites de pêche"@fr, "cantonnements? de pêche"@fr, "Éolien posé"@fr, "Éolien flottant"@fr, "énergie houlomotrice"@fr, "hydrolien"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ecologie-du-littoral'>themes:ecologie-du-littoral</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer'>themes:limite-administrative-speciale-en-mer</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer'>themes:lutte-anti-pollution-en-mer</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/navigation-maritime'>themes:navigation-maritime</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/topographie-en-mer'>themes:topographie-en-mer</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse-maritime'>themes:chasse-maritime</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Limite administrative spéciale en mer et sur le littoral'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer'>themes:limite-administrative-speciale-en-mer</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Limite administrative spéciale en mer et sur le littoral"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles
+    nautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure
+    des eaux, Lignes Transversales de la Mer, planification maritime
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Limite administrative spéciale"@fr, "3-milles"@fr, "eaux-interieure"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Bande des 300 m du littoral"@fr, "Zone des 12 milles"@fr, "Planification des espaces maritimes"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-6-3
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Communicable au seul intéressé - document faisant apparaître le comportement d'une personne, dès lors que la divulgation de ce comportement pourrait lui porter préjudice (CRPA, L311-6 3°)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/ecologie-du-littoral
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Écologie du littoral'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ecologie-du-littoral'>themes:ecologie-du-littoral</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Écologie du littoral"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,
+    habitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,
+    PNR en mer, RAMSAR, Natura 2000 en mer, réserves naturelles en mer, sites ENS du CG,
+    mammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttoral (IPLI)
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Écologie du littoral"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Traits? de côte"@fr, "habitats marins"@fr, "habitats côtiers"@fr, "habitats récifaux"@fr, "Nature de l'estran"@fr, "herbiers de Zostera"@fr, "tortues marines"@fr, "Sites? du Conservatoire du Littoral"@fr, "Inventaire permanent du LIttoral"@fr, "Qualité des eaux de baignade"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/navigation-maritime
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Navigation maritime'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/navigation-maritime'>themes:navigation-maritime</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Navigation maritime"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
+    cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
+    des gens de mer
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Navigation maritime"@fr, "cross"@fr, "cantonnement"@fr, "sauvetage"@fr, "enseignement-maritime"@fr, "formations-maritimes"@fr, "gens-de-mer"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Mouillages"@fr, "Dispositif de séparation de trafics"@fr, "protection épave"@fr, "Épave dangereuse"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/chasse-maritime
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Chasse maritime'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse-maritime'>themes:chasse-maritime</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Chasse maritime"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Zones de chasse réglementée, concession baux"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Chasse maritime"@fr.
+    </pre>
+-
+  id: /plume/InseeGeoIndex
+  parent: /plume
+  type: R
+  title: "Index géographique de l'INSEE"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Inventaires nature et biodiversité'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite'>themes:inventaires-nature-et-biodiversite</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Inventaires nature et biodiversité"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Protection et gestion de la nature'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature'>themes:protection-et-gestion-de-la-nature</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Protection et gestion de la nature"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/securite-routiere
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Sécurité routière'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/securite-routiere'>themes:securite-routiere</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Sécurité routière"@fr.
+    </pre>
+-
+  id: /plume/InseeGeoIndex/france
+  parent: /plume/InseeGeoIndex
+  type: E
+  title: France
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/chasse
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Chasse
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse'>themes:chasse</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Chasse"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/nuisances-dechets-et-pollution
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Nuisances, déchets et pollution'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Nuisances, déchets et pollution"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/bruit'>themes:bruit</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/dechets'>themes:dechets</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/perturbations-electromagnetiques'>themes:perturbations-electromagnetiques</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/pollution-des-sols'>themes:pollution-des-sols</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/qualite-de-l-air'>themes:qualite-de-l-air</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/bruit
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Bruit
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/bruit'>themes:bruit</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Bruit"@fr.
+    </pre>
+-
+  id: /plume/InseeGeoIndex/franceMetropolitaine
+  parent: /plume/InseeGeoIndex
+  type: E
+  title: 'France métropolitaine'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /plume
+  parent: ''
+  type: R
+  title: "Registre de l'application Plume (gestion des métadonnées d'un patrimoine PostgreSQL)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/perturbations-electromagnetiques
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Perturbations électromagnétiques'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/perturbations-electromagnetiques'>themes:perturbations-electromagnetiques</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Perturbations électromagnétiques"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/pollution-des-sols
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Pollution des sols'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/pollution-des-sols'>themes:pollution-des-sols</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Pollution des sols"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/qualite-de-l-air
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Qualité de l'air"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/qualite-de-l-air'>themes:qualite-de-l-air</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution'>themes:nuisances-dechets-et-pollution</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Qualité de l'air"@fr.
+    </pre>
+-
+  id: /plume/isExternal
+  parent: /plume
+  type: E
+  title: 'Donnée externe'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /plume/InseeGeoIndex/commune
+  parent: /plume/InseeGeoIndex
+  type: E
+  title: 'Commune ou arrondissement urbain (code INSEE)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/amenagement-numerique-des-territoires
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Aménagement numérique des territoires'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-numerique-des-territoires'>themes:amenagement-numerique-des-territoires</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication'>themes:reseaux-d-energie-et-de-communication</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Aménagement numérique des territoires"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/reseau-hydrocarbures
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Réseau de transport et de stockage des hydrocarbures'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-hydrocarbures'>themes:reseau-hydrocarbures</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication'>themes:reseaux-d-energie-et-de-communication</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réseau de transport et de stockage des hydrocarbures"@fr.
+    </pre>
+-
+  id: /plume/LinkedRecord
+  parent: /plume
+  type: E
+  title: 'Fiche distante'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /plume/InseeGeoIndex/departement
+  parent: /plume/InseeGeoIndex
+  type: E
+  title: Département
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/risques
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Risques
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Risques"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-avalanches'>themes:prevention-des-avalanches</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques'>themes:prevention-des-eruptions-volcaniques</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-inondations'>themes:prevention-des-inondations</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain'>themes:prevention-du-risque-mouvement-de-terrain</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-radon'>themes:prevention-du-risque-radon</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-minier'>themes:prevention-du-risque-minier</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-risques-technologiques'>themes:prevention-des-risques-technologiques</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-sismique'>themes:prevention-du-risque-sismique</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels'>themes:reglementation-de-prevention-des-risques-naturels</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques'>themes:reglementation-de-prevention-des-risques-technologiques</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/gestion-du-risque'>themes:gestion-du-risque</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention des éruptions volcaniques'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques'>themes:prevention-des-eruptions-volcaniques</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention des éruptions volcaniques"@fr.
+    </pre>
+-
+  id: /plume/relevanceScore
+  parent: /plume
+  type: E
+  title: Score
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /plume/InseeGeoIndex/region
+  parent: /plume/InseeGeoIndex
+  type: E
+  title: Région
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention du risque mouvement de terrain'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain'>themes:prevention-du-risque-mouvement-de-terrain</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention du risque mouvement de terrain"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/prevention-du-risque-radon
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention du risque radon'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-radon'>themes:prevention-du-risque-radon</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention du risque radon"@fr.
+    </pre>
+-
+  id: /plume/InseeGeoIndex/arrondissement
+  parent: /plume/InseeGeoIndex
+  type: E
+  title: Arrondissement
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /plume/DataServiceStandard
+  parent: /plume
+  type: R
+  title: 'Standards de services de données'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/prevention-du-risque-sismique
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention du risque sismique'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-sismique'>themes:prevention-du-risque-sismique</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention du risque sismique"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Réglementation de prévention des risques technologiques'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques'>themes:reglementation-de-prevention-des-risques-technologiques</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réglementation de prévention des risques technologiques"@fr.
+    </pre>
+-
+  id: /plume/DataServiceStandard/csw
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC Catalogue Service for the Web (CSW)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/industrie
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Industrie, production d'énergie et exploitation du sol"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie'>themes:industrie</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Industrie, production d'énergie et exploitation du sol"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mines'>themes:mines</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/sites-industriels'>themes:sites-industriels</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parcs-eoliens'>themes:parcs-eoliens</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/production-d-energie-hors-eolien'>themes:production-d-energie-hors-eolien</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/mines
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Mines, carrières et extraction de granulats'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mines'>themes:mines</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie'>themes:industrie</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Mines, carrières et extraction de granulats"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/sites-industriels
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Sites industriels'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/sites-industriels'>themes:sites-industriels</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie'>themes:industrie</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Sites industriels"@fr.
+    </pre>
+-
+  id: /plume/DataServiceStandard/wms
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC Web Map Service (WMS)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/production-d-energie-hors-eolien
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Production d'énergie hors éolien"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/production-d-energie-hors-eolien'>themes:production-d-energie-hors-eolien</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie'>themes:industrie</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Production d'énergie hors éolien"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/transport-et-deplacements
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Transport et déplacements'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Transport et déplacements"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/securite-routiere'>themes:securite-routiere</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/trafic-routier'>themes:trafic-routier</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-collectif'>themes:transport-collectif</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-exceptionnel'>themes:transport-exceptionnel</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-marchandises'>themes:transport-de-marchandises</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-matieres-dangereuses'>themes:transport-de-matieres-dangereuses</a>.
+    </pre>
+-
+  id: /plume/DataServiceStandard/sos
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC Sensor Observation Service (SOS)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/transport-collectif
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Transport collectif'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-collectif'>themes:transport-collectif</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Transport collectif"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/transport-exceptionnel
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Transport exceptionnel'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-exceptionnel'>themes:transport-exceptionnel</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Transport exceptionnel"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/transport-de-marchandises
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Transport de marchandises'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-marchandises'>themes:transport-de-marchandises</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Transport de marchandises"@fr.
+    </pre>
+-
+  id: /plume/DataServiceStandard/wcs
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC Web Coverage Service (WCS)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/infrastructures-de-transport
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Infrastructures de transport'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Infrastructures de transport"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-aeroportuaire'>themes:infrastructure-aeroportuaire</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/circulation-douce'>themes:circulation-douce</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-ferree'>themes:infrastructure-ferree</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-navigable'>themes:reseau-navigable</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-portuaire'>themes:infrastructure-portuaire</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-routiere'>themes:infrastructure-routiere</a>.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/circulation-douce
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Circulation douce'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/circulation-douce'>themes:circulation-douce</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Circulation douce"@fr.
+    </pre>
+-
+  id: /plume/DataServiceStandard/wfs
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC Web Feature Service (WFS)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/reseau-navigable
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Réseau navigable et ouvrages de navigation'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-navigable'>themes:reseau-navigable</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réseau navigable et ouvrages de navigation"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/infrastructure-portuaire
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Infrastructure portuaire'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-portuaire'>themes:infrastructure-portuaire</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Infrastructure portuaire"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/infrastructure-routiere
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Infrastructure routière'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-routiere'>themes:infrastructure-routiere</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Infrastructure routière"@fr.
+    </pre>
+-
+  id: /plume/DataServiceStandard/atom
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'ATOM Syndication Format'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/persons/LeslieLemaire
+  parent: /ecospheres/persons
+  type: E
+  title: 'Leslie Lemaire'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/LeslieLemaire'>persons:LeslieLemaire</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://xmlns.com/foaf/0.1/Person'>foaf:Person</a>;
+      <a href='http://xmlns.com/foaf/0.1/name'>foaf:name</a> "Leslie Lemaire".
+    </pre>
+-
+  id: /plume/DataServiceStandard/wmts
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC Web Map Tile Service (WMTS)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/eurovoc/100141
+  parent: /ecospheres
+  type: E
+  title: 'Thésaurus multilingue EuroVoc'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#ConceptScheme'>skos:ConceptScheme</a>;
+      <a href='http://purl.org/dc/terms/title'>dct:title</a> "Thésaurus multilingue EuroVoc"@fr;
+      <a href='http://purl.org/dc/terms/description'>dct:description</a> "EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU. It contains terms in 24 EU languages (Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish and Swedish), plus in three languages of countries which are candidate for EU accession: Albanian, Macedonian and Serbian.  
+
+    EuroVoc is managed by the Publications Office of the European Union, which moved forward to ontology-based thesaurus management and semantic web technologies conformant to W3C recommendations as well as latest trends in thesaurus standards.  
+
+    EuroVoc users include the European Union institutions, the Publications Office of the EU, national and regional parliaments in Europe, plus national governments and private users around the world.
+    "@en, "EuroVoc est un thésaurus multilingue et multidisciplinaire couvrant les activités de l'UE. Il contient des termes dans 24 langues de l'UE (bulgare, croate, tchèque, danois, néerlandais, anglais, estonien, finnois, français, allemand, grec, hongrois, irlandais, italien, letton, lituanien, maltais, polonais, portugais, roumain, slovaque, slovène, espagnol et suédois), ainsi que dans les trois langues des pays candidats à l'adhésion à l'UE : albanais, macédonien et serbe.
+
+    EuroVoc est géré par l'Office des publications de l'Union européenne, qui a évolué vers une gestion de thésaurus basée sur des ontologies et des technologies Web sémantiques conformes aux recommandations du W3C ainsi qu'aux dernières tendances en matière de normes de thésaurus.
+
+    Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, l'Office des publications de l'UE, les parlements nationaux et régionaux d'Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.
+    "@fr;
+      <a href='http://purl.org/dc/terms/modified'>dct:modified</a> "2021-12-17".
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/amenagement-et-urbanisme
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Aménagement et urbanisme'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Aménagement et urbanisme"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <http://eurovoc.europa.eu/4619>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Aménagement Urbanisme"@fr, "amenagement-urbanisme"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/servitudes-d-utilite-publique'>themes:servitudes-d-utilite-publique</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-europeenne-d-amenagement'>themes:politique-europeenne-d-amenagement</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/zonages-d-amenagement'>themes:zonages-d-amenagement</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/planification'>themes:planification</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etudes'>themes:etudes</a>.
+    </pre>
+-
+  id: /plume/DataServiceStandard/ogcapi-features
+  parent: /plume/DataServiceStandard
+  type: E
+  title: 'OGC API - Features'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/etablissements-d-enseignement
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Etablissements d'enseignement"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-enseignement'>themes:etablissements-d-enseignement</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Etablissements d'enseignement"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Culture Société Service/Enseignement"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "enseignement"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/equipements-de-tourisme
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Équipements de tourisme'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme'>themes:equipements-de-tourisme</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Équipements de tourisme"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Culture Société Service/Tourisme"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Campings?"@fr, "Etablissements Recevant du Public de type restaurant"@fr, "hébergements touristiques"@fr.
+    </pre>
+-
+  id: /plume/StandardsRegister
+  parent: /plume
+  type: R
+  title: 'Registre de standards'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/assainissement
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Assainissement
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/assainissement'>themes:assainissement</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Assainissement"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
+    de pompage, ...
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/4485'>eurovoc:4485</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Assainissement"@fr, "eau/n_assainissement"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "assainissement"@fr, "STEP"@fr, "Stations? d'épurations?"@fr, "Stations? de traitement des eaux usées"@fr, "Systèmes? de traitement des eaux usées"@fr, "STEU"@fr.
+    </pre>
+-
+  id: /ecospheres/eurovoc/609
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'eau souterraine'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/609'>eurovoc:609</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau'>themes:masses-d-eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "eau souterraine"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/ouvrages-hydrauliques
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Ouvrages hydrauliques'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ouvrages-hydrauliques'>themes:ouvrages-hydrauliques</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Ouvrages hydrauliques"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,
+    moulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,
+    obstacles à l'écoulement, ...
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Ouvrage"@fr, "Eau / Ouvrage"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "ouvrages? hydrauliques?"@fr, "Obstacles? à l'écoulement"@fr, "Digues"@fr.
+    </pre>
+-
+  id: /ecospheres/eurovoc/3338
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: 'pêche sportive'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/3338'>eurovoc:3338</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "pêche sportive"@fr.
+    </pre>
+-
+  id: /plume/StandardsRegister/OGC-EPSG
+  parent: /plume/StandardsRegister
+  type: E
+  title: "Registre EPSG de l'OGC (systèmes de coordonnées)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/eurovoc/6398
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: 'protection des eaux'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/6398'>eurovoc:6398</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "protection des eaux"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/foncier-agricole
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Foncier agricole'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-agricole'>themes:foncier-agricole</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol'>themes:foncier-et-occupation-du-sol</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Foncier agricole"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "definition: Divisions, regroupements, changement propriétaires"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Foncier Sol/Foncier agricole"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/mutation-fonciere
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Mutation foncière'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mutation-fonciere'>themes:mutation-fonciere</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol'>themes:foncier-et-occupation-du-sol</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Mutation foncière"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Remembrement, travaux connexes"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Foncier Sol/Mutation foncière"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/construction
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Construction
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/construction'>themes:construction</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Construction"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
+    autorisés, statistiques de permis de construire, règles de construction
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Construction"@fr, "permis-de-construire"@fr, "regles-de-construction"@fr, "sitadel"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Construction de logements"@fr, "Construction de locaux"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/accession-a-la-propriete
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Accession à la propriété'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/accession-a-la-propriete'>themes:accession-a-la-propriete</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Accession à la propriété"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Accession Propriété"@fr, "Habitat Politique de la ville/Accession à la propriété"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/occupation-des-logements
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Occupation des logements'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-des-logements'>themes:occupation-des-logements</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Occupation des logements"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Aides au logements, taux d'occupation, suivi des loyers, ..."@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Occupation des logements"@fr, "loyer"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Bâtiment majoritairement d'activités vacant"@fr, "Local d'activités vacant"@fr.
+    </pre>
+-
+  id: /plume/CrpaAuthorizedLicense
+  parent: /plume
+  type: R
+  title: 'Licences admises pour les informations publiques des administrations françaises'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/renovation-urbaine
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Rénovation urbaine'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/renovation-urbaine'>themes:renovation-urbaine</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville'>themes:habitat-et-politique-de-la-ville</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Rénovation urbaine"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Habitat Politique de la ville/Rénovation"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "ANAH"@fr, "rénovation urbaine"@fr, "ANRU"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Lutte anti-pollution en mer et sur le littoral'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer'>themes:lutte-anti-pollution-en-mer</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral'>themes:mer-et-littoral</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Lutte anti-pollution en mer et sur le littoral"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Plan de pose de barrages, CNPE, plan de gestion de polluants"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Mer Littoral/Lutte anti-pollution"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "plans? de protection POLMAR"@fr.
+    </pre>
+-
+  id: /plume/CrpaAuthorizedLicense/etalab-2.0
+  parent: /plume/CrpaAuthorizedLicense
+  type: E
+  title: 'Licence Ouverte version 2.0'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/protection-et-gestion-des-paysages
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Protection et gestion des paysages'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-des-paysages'>themes:protection-et-gestion-des-paysages</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite'>themes:nature-paysages-et-biodiversite</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Protection et gestion des paysages"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Réseaux d'énergie et de communication"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication'>themes:reseaux-d-energie-et-de-communication</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réseaux d'énergie et de communication"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-numerique-des-territoires'>themes:amenagement-numerique-des-territoires</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-electrique'>themes:reseau-electrique</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-hydrocarbures'>themes:reseau-hydrocarbures</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-de-telecommunication'>themes:reseau-de-telecommunication</a>.
+    </pre>
+-
+  id: /plume/CrpaAuthorizedLicense/ODbL-1.0
+  parent: /plume/CrpaAuthorizedLicense
+  type: E
+  title: 'ODC Open Database License (ODbL) version 1.0'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/reseau-de-telecommunication
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Réseau de télécommunication'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-de-telecommunication'>themes:reseau-de-telecommunication</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication'>themes:reseaux-d-energie-et-de-communication</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réseau de télécommunication"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/prevention-des-avalanches
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Prévention des avalanches'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-avalanches'>themes:prevention-des-avalanches</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Prévention des avalanches"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations
+  parent: /plume
+  type: R
+  title: "Restrictions d'accès en application du Code des relations entre le public et l'administration"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Réglementation de prévention des risques naturels'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels'>themes:reglementation-de-prevention-des-risques-naturels</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques'>themes:risques</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Réglementation de prévention des risques naturels"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/parcs-eoliens
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Parcs éoliens'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parcs-eoliens'>themes:parcs-eoliens</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie'>themes:industrie</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Parcs éoliens"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-2-dna
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Communicable à la discrétion de l'administration - document non achevé (CRPA, L311-2 §1)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/trafic-routier
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Trafic routier et exploitation de la route'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/trafic-routier'>themes:trafic-routier</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Trafic routier et exploitation de la route"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/transport-de-matieres-dangereuses
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Transport de matières dangereuses'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-matieres-dangereuses'>themes:transport-de-matieres-dangereuses</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements'>themes:transport-et-deplacements</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Transport de matières dangereuses"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/infrastructure-aeroportuaire
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Infrastructure aéroportuaire'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-aeroportuaire'>themes:infrastructure-aeroportuaire</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Infrastructure aéroportuaire"@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-4
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Communicable sous réserve - document soumis à des droits de propriété littéraire et artistique (CRPA, L311-4)'
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/eurovoc/6011
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: climat
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/6011'>eurovoc:6011</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "climat"@fr.
+    </pre>
+-
+  id: /ecospheres/eurovoc/5482
+  parent: /ecospheres/eurovoc/100141
+  type: E
+  title: 'changement climatique'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://eurovoc.europa.eu/5482'>eurovoc:5482</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://eurovoc.europa.eu/100141'>eurovoc:100141</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "changement climatique"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/meteorologie
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Météorologie
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/meteorologie'>themes:meteorologie</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat'>themes:climat</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Météorologie"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/1892'>eurovoc:1892</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Air Climat/Météo"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/infrastructure-ferree
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Infrastructure ferrée, gares et ouvrages d'art"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-ferree'>themes:infrastructure-ferree</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport'>themes:infrastructures-de-transport</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Infrastructure ferrée, gares et ouvrages d'art"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/politique-europeenne-d-amenagement
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Politique européenne d'aménagement"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-europeenne-d-amenagement'>themes:politique-europeenne-d-amenagement</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Politique européenne d'aménagement"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Aménagement Urbanisme/Politique européenne"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/planification
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Planification
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/planification'>themes:planification</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme'>themes:amenagement-et-urbanisme</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Planification"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <http://eurovoc.europa.eu/2391>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Aménagement Urbanisme/Zonages Planification"@fr, "ptu"@fr, "loi-littoral"@fr, "loi-montagne"@fr, "documents-durbanisme"@fr, "plu"@fr, "plui"@fr, "pluis"@fr, "document-durbanisme"@fr, "document-urbanisme"@fr, "documents-durba"@fr, "scot"@fr, "ZONAGES PLANIFICATION"@fr, "amenagement_urbanisme/n_zonages_planification"@fr, "zonage planification"@fr, "urbanisme planification"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Directives? Territoriales? d'Aménagement"@fr, "DTA"@fr, "DTADD"@fr, "Document d’urbanisme"@fr, "cartes? communales?"@fr, "P\.L\.U\."@fr, "PLU"@fr, "Schémas? de Cohérence Territoriale"@fr, "SCOT"@fr, "Règlement National d'Urbanisme"@fr, "PDU"@fr, "Plan de déplacement urbain"@fr, "loi littoral"@fr, "Loi Montagne"@fr, "Zone de montagne au titre de la loi du 9 janvier 1985"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/patrimoine-culturel
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Patrimoine culturel'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/patrimoine-culturel'>themes:patrimoine-culturel</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites'>themes:etablissements-d-activites</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Patrimoine culturel"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Culture Société Service/Patrimoine culturel"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Monuments? Historiques?"@fr, "Entreprises? du patrimoine vivant"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/eau
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: Eau
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#topConceptOf'>skos:topConceptOf</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Eau"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#exactMatch'>skos:exactMatch</a> <a href='http://eurovoc.europa.eu/597'>eurovoc:597</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Utilisation Autre"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#changeNote'>skos:changeNote</a> "Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
+    sont affectés au thème Eau.
+    "@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#narrower'>skos:narrower</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/alimentation-en-eau-potable'>themes:alimentation-en-eau-potable</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/assainissement'>themes:assainissement</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau'>themes:masses-d-eau</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ouvrages-hydrauliques'>themes:ouvrages-hydrauliques</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/peche-en-eaux-interieures'>themes:peche-en-eaux-interieures</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau'>themes:surveillance-de-la-ressource-en-eau</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau'>themes:interventions-sur-les-cours-d-eau</a>, <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-de-l-eau'>themes:protection-de-l-eau</a>.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-1
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: "Non communicable - document d'une autorité judiciaire ou de contrôle administratif (CRPA, L311-5 1°)"
+  script: null
+  jsonval: null
+  htmlval: null
+-
+  id: /ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: "Interventions sur les cours d'eau"
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau'>themes:interventions-sur-les-cours-d-eau</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau'>themes:eau</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Interventions sur les cours d'eau"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a> "Travaux sur linéaire, curage-dragage, drainages"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#changeNote'>skos:changeNote</a> "Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Eau/Travaux Action"@fr.
+    </pre>
+-
+  id: /ecospheres/themes-ecospheres/propriete-fonciere
+  parent: /ecospheres/themes-ecospheres
+  type: E
+  title: 'Propriété foncière'
+  script: null
+  jsonval: null
+  htmlval: |
+    <pre><a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/propriete-fonciere'>themes:propriete-fonciere</a>
+      <a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a href='http://www.w3.org/2004/02/skos/core#Concept'>skos:Concept</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#inScheme'>skos:inScheme</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres'>ecospheres:themes-ecospheres</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#broader'>skos:broader</a> <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol'>themes:foncier-et-occupation-du-sol</a>;
+      <a href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a> "Propriété foncière"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#scopeNote'>skos:scopeNote</a> "intègre le cadastre et le définition du domaine public"@fr;
+      <a href='http://www.w3.org/2004/02/skos/core#altLabel'>skos:altLabel</a> "Foncier Sol/Propriété foncière"@fr;
+      <a href='http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp'>espsyntax:regexp</a> "Domaine Public"@fr, "parcellaire"@fr, ""@fr.
+    </pre>
+-
+  id: /plume/CrpaAccessLimitations/L311-5-2-a
+  parent: /plume/CrpaAccessLimitations
+  type: E
+  title: 'Non communicable - atteinte au secret des délibérations du Gouvernement et des autorités responsables relevant du pouvoir exécutif (CRPA, L311-5 2°a)'
+  script: null
+  jsonval: null
+  htmlval: null

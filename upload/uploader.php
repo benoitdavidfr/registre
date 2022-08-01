@@ -25,17 +25,25 @@ define('REGISTRES', [
     'title'=> "registre en local en conteneur",
     'url'=> 'http://registre',
   ],
-  'pprod' => [
+  'georef-pprod' => [
     'title'=> "registre sur georef en pré-prod",
     'url'=> 'https://regpprod.georef.eu',
   ],
-  'prod' => [
+  'georef' => [
     'title'=> "registre sur georef en prod",
     'url'=> 'https://registre.georef.eu',
   ],
   'ovh' => [
     'title'=> "registre sur OVH",
     'url'=> 'http://shomgt3.ecolabdata.fr',
+  ],
+  'pprod' => [
+    'title'=> "registre sur data.ddgfr en pré-prod",
+    'url'=> 'https://preprod.registre.data.developpement-durable.gouv.fr',
+  ],
+  'prod' => [
+    'title'=> "registre sur data.ddgfr en prod",
+    'url'=> 'https://registre.data.developpement-durable.gouv.fr',
   ],
 ]
 );
@@ -122,6 +130,11 @@ elseif (!in_array($chapter = $argv[3], array_keys(Yaml::parseFile($yamlFile)['ch
 
 
 function analyzeResult(string $method, string $path, array $result): void {
+  if ($result['headers'] == "http_response_header non défini") {
+    echo "$result[headers]\n";
+    echo "body="; print_r($result['body']);
+    return;
+  }
   $body = json_decode($result['body'], true);
   if ($body)
     $result['body'] = $body;
